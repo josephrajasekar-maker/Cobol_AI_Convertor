@@ -21,7 +21,6 @@ Step-by-step, analyze and explain how each section maps to Python, then provide 
 COBOL CODE:
 {cobol_code}
 """
-
     response = openai.ChatCompletion.create(
         model="gpt-4",        # Use gpt-4 for best results
         messages=[
