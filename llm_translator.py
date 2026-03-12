@@ -17,15 +17,12 @@ COBOL CODE:
 """
     try:
 
-         response = client.chat.completions.create(
+        response = client.chat.completions.create(
             model="gpt-4.1",
-            messages=[
-            {"role": "user", "content": prompt},
-        
-         ],
-             temperature=0
-        )   
-          
+            messages=[{"role":"user","content":prompt}],
+            temperature=0
+        )
+
         return response.choices[0].message.content
 
     except Exception as e:
