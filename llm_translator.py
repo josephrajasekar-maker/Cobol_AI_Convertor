@@ -22,5 +22,6 @@ COBOL CODE:
         max_tokens=2048,
         temperature=0.1,
     )
-    return response['choices'][0]['message']['content']
+    return response.choices[0].message.content
+    #return response['choices'][0]['message']['content']
     
