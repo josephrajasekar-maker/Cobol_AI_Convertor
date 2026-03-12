@@ -15,17 +15,20 @@ Convert the following COBOL program to Python.
 COBOL CODE:
 {cobol_code}
 """
-    try:
+prompt = f"""Convert the following COBOL program to Python.
+Step-by-step, analyze and explain how each section maps to Python, then provide the complete Python code.
 
-        response = client.chat.completions.create(
-            model="gpt-4.1",
-            messages=[{"role":"user","content":prompt}],
-            temperature=0
-        )
+COBOL CODE:
+{cobol_code}
+"""
 
-        return response.choices[0].message.content
-
-    except Exception as e:
-
-        print("AI translation failed:", e)
-        return "# AI translation failed"
+    response = openai.ChatCompletion.create(
+        model="gpt-4",        # Use gpt-4 for best results
+        messages=[
+            {"role": "user", "content": prompt}
+        ],
+        max_tokens=2048,
+        temperature=0.1,
+    )
+    return response['choices'][0]['message']['content']
+    
