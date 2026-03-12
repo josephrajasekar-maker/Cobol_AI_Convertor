@@ -2,7 +2,7 @@ from openai import OpenAI
 from prompt_templates import COBOL_TO_PYTHON_PROMPT
 
 client = OpenAI()
-export OPENAI_API_KEY="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"
+export OPENAI_API_KEY= "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"
 
 def translate_cobol_to_python(cobol_code):
 
