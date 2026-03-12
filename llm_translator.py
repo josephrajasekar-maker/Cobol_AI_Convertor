@@ -21,8 +21,10 @@ COBOL CODE:
             model="gpt-4.1",
             messages=[
             {"role": "user", "content": prompt},
-            temperature=0    
+        
          ],
+             temperature=0
+        )   
           
     return response.choices[0].message.content
 
