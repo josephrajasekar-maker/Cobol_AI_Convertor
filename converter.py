@@ -13,7 +13,7 @@ def convert_program(input_file):
     print("Sending to AI for conversion...")
 
     python_code = translate_cobol_to_python(cobol_code)
-
+    print(python_code)
     output_file = input_file.replace(".cbl", ".py")
 
     output_path = os.path.join("output", output_file)
@@ -30,7 +30,7 @@ def main():
     cobol_program = "sample_cobol/customer_batch.cbl"
 
     convert_program(cobol_program)
-
+    print(cobol_program)
 
 if __name__ == "__main__":
     main()
