@@ -8,13 +8,6 @@ import os
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 def translate_cobol_to_python(cobol_code):
-
-    prompt = f"""
-Convert the following COBOL program to Python.
-
-COBOL CODE:
-{cobol_code}
-"""
 prompt = f"""Convert the following COBOL program to Python.
 Step-by-step, analyze and explain how each section maps to Python, then provide the complete Python code.
 
