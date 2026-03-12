@@ -1,7 +1,8 @@
 from openai import OpenAI
 from prompt_templates import COBOL_TO_PYTHON_PROMPT
 import os
-#export OPENAI_API_KEY= "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"
+load_dotenv()
+#export OPENAI_API_KEY="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"
 
 client = OpenAI(api_key=os.getenv("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"))
 
